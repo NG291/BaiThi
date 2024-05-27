@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai1</title>
+</head>
+<body>
+<script>
+    function findAvg(arr) {
+        let sum = 0;
+        for(let i = 0; i < arr.length; i++){
+            sum += arr[i];
+        }
+        return sum / arr.length;
+    }
+
+    let scores = [];
+    let numberOfScores = +prompt('Nhập số lượng điểm:');
+    for(let i = 0; i < numberOfScores; i++) {
+        let score = +prompt('Nhập điểm thứ ' + (i + 1) + ':');
+        scores.push(score);
+    }
+
+    let average = findAvg(scores);
+    alert('Điểm trung bình: ' + average);
+</script>
+
+</body>
+</html>

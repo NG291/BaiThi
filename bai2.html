@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+    function insertNumberToArray(arr, index, value) {
+        if (index >= 0 && index <= arr.length) {
+            arr.splice(index, 0, value);
+        } else {
+            alert("Vị trí không hợp lệ");
+        }
+        return arr;
+    }
+    let numberOfElements = +prompt('Nhập số lượng phần tử của mảng:');
+    let arr = [];
+    for (let i = 0; i < numberOfElements; i++) {
+        let n = +prompt('Nhập giá trị phần tử thứ ' + (i + 1) + ':');
+        arr.push(n);
+    }
+    let index = +prompt('Nhập vị trí cần chèn:');
+    let value = +prompt('Nhập giá trị cần chèn:');
+    let updatedArray = insertNumberToArray(arr, index, value);
+    document.write('Mảng sau khi chèn: ' + updatedArray);
+</script>
+</body>
+</html>
